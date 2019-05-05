@@ -12,9 +12,9 @@
 		A3EF3E8E22792A5200FC3339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EF3E8D22792A5200FC3339 /* Assets.xcassets */; };
 		A3EF3E9122792A5200FC3339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EF3E8F22792A5200FC3339 /* LaunchScreen.storyboard */; };
 		A3EF3E9922792B7000FC3339 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3E9822792B7000FC3339 /* PaintingViewController.swift */; };
-		A3EF3E9B22792BC800FC3339 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3E9A22792BC800FC3339 /* PaintingTableViewCell.swift */; };
 		A3EF3E9D22792F5700FC3339 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3E9C22792F5700FC3339 /* Painting.swift */; };
-		A3EF3E9F227933CA00FC3339 /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3E9E227933CA00FC3339 /* PaintingModel.swift */; };
+		A3EF3E9F227933CA00FC3339 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3E9E227933CA00FC3339 /* PaintingController.swift */; };
+		A3EF3EEF227EEF0200FC3339 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF3EEE227EEF0200FC3339 /* PaintingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		A3EF3E9022792A5200FC3339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3EF3E9222792A5200FC3339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3EF3E9822792B7000FC3339 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
-		A3EF3E9A22792BC800FC3339 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		A3EF3E9C22792F5700FC3339 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
-		A3EF3E9E227933CA00FC3339 /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
+		A3EF3E9E227933CA00FC3339 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		A3EF3EEE227EEF0200FC3339 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +62,10 @@
 			children = (
 				A3EF3E8622792A5100FC3339 /* AppDelegate.swift */,
 				A3EF3E8A22792A5100FC3339 /* Main.storyboard */,
-				A3EF3E9E227933CA00FC3339 /* PaintingModel.swift */,
+				A3EF3E9E227933CA00FC3339 /* PaintingController.swift */,
 				A3EF3E9C22792F5700FC3339 /* Painting.swift */,
 				A3EF3E9822792B7000FC3339 /* PaintingViewController.swift */,
-				A3EF3E9A22792BC800FC3339 /* PaintingTableViewCell.swift */,
+				A3EF3EEE227EEF0200FC3339 /* PaintingTableViewCell.swift */,
 				A3EF3E8D22792A5200FC3339 /* Assets.xcassets */,
 				A3EF3E8F22792A5200FC3339 /* LaunchScreen.storyboard */,
 				A3EF3E9222792A5200FC3339 /* Info.plist */,
@@ -146,8 +146,8 @@
 			files = (
 				A3EF3E9922792B7000FC3339 /* PaintingViewController.swift in Sources */,
 				A3EF3E8722792A5100FC3339 /* AppDelegate.swift in Sources */,
-				A3EF3E9B22792BC800FC3339 /* PaintingTableViewCell.swift in Sources */,
-				A3EF3E9F227933CA00FC3339 /* PaintingModel.swift in Sources */,
+				A3EF3EEF227EEF0200FC3339 /* PaintingTableViewCell.swift in Sources */,
+				A3EF3E9F227933CA00FC3339 /* PaintingController.swift in Sources */,
 				A3EF3E9D22792F5700FC3339 /* Painting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
