@@ -8,9 +8,13 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PaintingTableViewCellDelegate {
     
-    func likeButtonWasTapped(for cell: PaintingTableViewCell) {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        guard let indexPath = paintingTableView.indexPath(for: cell) else {return}
+        let painting = paintingController.paintings[indexPath.row]
+        paintingController.toggleIsLiked(painting: painting)
+        paintingTableView.reloadRows(at: [indexPath], with: .fade)
         //        In order to accomplish this, you will need to get the IndexPath of the cell parameter. (Hint: tableView.indexPath(for: UITableViewCell)
 //        Create a constant for the painting that the user just liked/unliked. You may get the Painting by either using the cell parameter's painting property or using the IndexPath you just got and using it with the view controller's paintingController's array of paintings.
 //        Call the paintingController's toggleIsLiked(for: Painting) function.
@@ -18,7 +22,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, PaintingT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.paintingController.paintings.count
+        return paintingController.paintings.count  //why not self?
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,8 +32,9 @@ class PaintingViewController: UIViewController, UITableViewDataSource, PaintingT
         
         let painting = paintingController.paintings[indexPath.row]
         paintingCell.painting = painting
+        paintingCell.delegate = self
         
-//cell.delegate = self
+ 
         return cell
     }
     

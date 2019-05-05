@@ -14,6 +14,6 @@ struct Painting {
     var isLiked : Bool
     init (image: UIImage, isLiked: Bool = false) {
         self.image = image
-        self.isLiked = false
+        self.isLiked = isLiked
     }
 }

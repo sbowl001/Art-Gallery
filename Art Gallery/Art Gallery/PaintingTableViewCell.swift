@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol PaintingTableViewCellDelegate: AnyObject {
-    func likeButtonWasTapped(for cell: PaintingTableViewCell)
+protocol PaintingTableViewCellDelegate: class {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell)  //on versus for?
 }
 class PaintingTableViewCell: UITableViewCell {
 
@@ -23,21 +23,28 @@ class PaintingTableViewCell: UITableViewCell {
     var painting : Painting? {
         //        Add a didSet property observer to the painting variable, and call updateViews() in it.
         didSet {
-            self.updateViews()
+            updateViews()
         }
     }
     
    weak var delegate: PaintingTableViewCellDelegate?
     func updateViews() {
         //        Create a function called updateViews(). This function should unwrap the painting variable, and put its image in the image view, and set the button's title according to whether the painting is liked or not.
-//        guard let painting = self.painting,
+        guard let painting = painting else {return}
+        images.image = painting.image
+        if(painting.isLiked) {
+            button.setTitle("Unlike", for: .normal)
+        } else {
+            button.setTitle("Like", for: .normal)
+        }
+        
 //            isViewLoaded else {return}
 //
         
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        self.delegate?.likeButtonWasTapped(for: self)
+        self.delegate?.likeButtonWasTapped(on: self)
   
     }
     
