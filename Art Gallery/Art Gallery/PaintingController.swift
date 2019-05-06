@@ -42,6 +42,8 @@ class PaintingController {
   */
     func toggleIsLiked(painting: Painting) {
 //        painting.isLiked = !painting.isLiked
+        guard let index = paintings.index(where: { $0.image == painting.image }) else { return }
+        paintings[index].isLiked = !paintings[index].isLiked
     }
     
 }
